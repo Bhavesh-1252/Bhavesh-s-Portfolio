@@ -8,15 +8,15 @@ import Skills from './component/Skills'
 import Project from './component/Project'
 import Contact from './component/Contact'
 import Footer from './component/Footer'
-import { mobileContext } from './context/context'
+// import { mobileContext } from './context/context'
 
 function App() {
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  ;
 
   return (
     <>
-      <mobileContext.Provider value={{isMobile, setIsMobile}}>
+      {/* <mobileContext.Provider value={{isMobile, setIsMobile}}> */}
         <Navbar />
 
         <main>
@@ -28,7 +28,7 @@ function App() {
         </main>
 
         <Footer />
-      </mobileContext.Provider>
+      {/* </mobileContext.Provider> */}
     </>
   )
 }

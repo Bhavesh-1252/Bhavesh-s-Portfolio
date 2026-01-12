@@ -1,11 +1,12 @@
 import { developerInfo } from '../data/profile'
 import { useState, useEffect, useContext } from 'react';
-import { mobileContext } from '../context/context';
+// import { mobileContext } from '../context/context';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
-    const { isMobile, setIsMobile } = useContext(mobileContext)
+    // const { isMobile, setIsMobile } = useContext(mobileContext)
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 640)
     const [isHamburger, setIsHamburger] = useState(true);
 
     // Use Effect for navbar color change when scroll
