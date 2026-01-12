@@ -1,9 +1,109 @@
-import React from 'react'
+import { useState } from 'react'
 import { developerInfo } from '../data/profile'
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
+    const [captchaValue, setCaptchaValue] = useState(null);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    })
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => {
+            return {
+                ...prev,
+                [name]: value
+            }
+        })
+    }
+
+    const handleCaptcha = (value) => {
+        setCaptchaValue(value);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (!captchaValue) {
+            toast.error(`Error: Clear the Captcha`, {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                transition: Bounce,
+            });
+            return;
+        }
+
+        emailjs.send(
+            import.meta.env.VITE_SERVICE_KEY,
+            import.meta.env.VITE_TEMPLATE_KEY,
+            formData,
+            import.meta.env.VITE_PUBLIC_KEY
+        )
+            .then(() => {
+                toast.success('Message sent successfully', {
+                    position: "top-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                    transition: Bounce,
+                });
+
+                setFormData({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                })
+                setCaptchaValue(null);
+            })
+            .catch((e) => {
+                toast.error(`Error: Form not submitted`, {
+                    position: "top-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                    transition: Bounce,
+                });
+            })
+
+    }
+
     return (
         <section id='contact' className="px-5 sm:px-10 py-20 bg-gray-50">
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+                transition={Bounce}
+            />
+
             <div className='w-fit m-auto text-center mb-16 '>
                 <h2 className='text-4xl sm:text-5xl font-bold'>Get In Touch</h2>
                 <span className='w-20 h-1 inline-block bg-blue-600'></span>
@@ -43,30 +143,42 @@ const Contact = () => {
 
                 {/* Contact form */}
                 <div>
-                    <form action="" className='p-6 bg-white shadow hover:shadow-lg transition-shadow border-1 border-[#0101011e] rounded-lg'>
-                        <div className='flex gap-4 mb-5'>
-                            <div className='w-full'>
-                                <label htmlFor="userName" className='text-sm font-semibold text-gray-700'>Your Name</label>
-                                <input id='userName' name="name" className='w-full border-1 border-[#0101011e] focus-visible:outline-1 rounded-md px-3 py-1.5 focus:border mt-2 text-sm' type="text" required placeholder='John Doe'/>
+                    <form onSubmit={handleSubmit}>
+
+                        <div className='p-6 bg-white shadow hover:shadow-lg transition-shadow border-1 border-[#0101011e] rounded-lg'>
+                            <div className='flex gap-4 mb-5'>
+                                <div className='w-full'>
+                                    <label htmlFor="name" className='text-sm font-semibold text-gray-700'>Your Name</label>
+                                    <input id='name' onChange={handleChange} name="name" className='w-full border-1 border-[#0101011e] focus-visible:outline-1 rounded-md px-3 py-1.5 focus:border mt-2 text-sm' type="text" required placeholder='John Doe' value={formData.name} />
+                                </div>
+                                <div className='w-full'>
+                                    <label htmlFor="userEmail" className='text-sm font-semibold text-gray-700 focus-visible:border-none focus-visible:outline-none'>Your Email</label>
+                                    <input id="userEmail" onChange={handleChange} name='email' type="email" required className='w-full border-1 border-[#0101011e] focus-visible:outline-1 rounded-md px-3 py-1.5 focus:border mt-2 text-sm' placeholder='johndoe@email.com' value={formData.email} />
+                                </div>
                             </div>
-                            <div className='w-full'>
-                                <label htmlFor="userEmail" className='text-sm font-semibold text-gray-700 focus-visible:border-none focus-visible:outline-none'>Your Email</label>
-                                <input id="userEmail" name='email' type="email" required className='w-full border-1 border-[#0101011e] focus-visible:outline-1 rounded-md px-3 py-1.5 focus:border mt-2 text-sm' placeholder='johndoe@email.com'/>
+                            <div className='w-full mb-5'>
+                                <label htmlFor="subject" className='text-sm font-semibold text-gray-700'>Subject</label>
+                                <input id='subject' onChange={handleChange} name="subject" className='w-full border-1 border-[#0101011e] focus-visible:outline-1 rounded-md px-3 py-1.5 focus:border mt-2 text-sm' type="text" required placeholder='Project Inquiry' value={formData.subject} />
                             </div>
-                        </div>
-                        <div className='w-full mb-5'>
-                            <label htmlFor="subject" className='text-sm font-semibold text-gray-700'>Subject</label>
-                            <input id='subject' name="name" className='w-full border-1 border-[#0101011e] focus-visible:outline-1 rounded-md px-3 py-1.5 focus:border mt-2 text-sm' type="text" required placeholder='Project Inquiry' />
+
+                            <div className='w-full mb-5'>
+                                <label htmlFor="projectDesc" className='text-sm font-semibold text-gray-700'>Message</label>
+                                <textarea rows={captchaValue ? 6 : 3} onChange={handleChange} name="message" id="projectDesc" className='w-full border-1 border-[#0101011e] focus-visible:outline-1 rounded-md px-3 py-1.5 focus:border mt-2 text-sm' placeholder='Tell me about your project...' value={formData.message}></textarea>
+                            </div>
+
+                            <button type='submit' className='bg-blue-600 w-full text-white flex items-center justify-center py-2.5 text-lg rounded-md' >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-send mr-2" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                                Send Message
+                            </button>
+
                         </div>
 
-                        <div className='w-full mb-5'>
-                            <label htmlFor="projectDesc" className='text-sm font-semibold text-gray-700'>Message</label>
-                            <textarea rows={6} name="" id="projectDesc" className='w-full border-1 border-[#0101011e] focus-visible:outline-1 rounded-md px-3 py-1.5 focus:border mt-2 text-sm' placeholder='Tell me about your project...'></textarea>
+                        <div className={`mt-2 m-auto ${captchaValue ? "hidden" : "flex"}`}>
+                            <ReCAPTCHA
+                                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                                onChange={handleCaptcha}
+                                className="inline-block m-auto " />
                         </div>
-
-                        <button type='submit' className='bg-blue-600 w-full text-white flex items-center justify-center py-2.5 text-lg rounded-md'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-send mr-2" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
-                            Send Message</button>
                     </form>
                 </div>
             </div>
