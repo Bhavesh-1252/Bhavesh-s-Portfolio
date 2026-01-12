@@ -1,4 +1,3 @@
-import React from 'react'
 import { developerInfo } from '../data/profile'
 
 const About = () => {
