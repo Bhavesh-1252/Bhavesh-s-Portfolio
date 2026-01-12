@@ -163,7 +163,7 @@ const Contact = () => {
 
                             <div className='w-full mb-5'>
                                 <label htmlFor="projectDesc" className='text-sm font-semibold text-gray-700'>Message</label>
-                                <textarea rows={captchaValue ? 6 : 3} onChange={handleChange} name="message" id="projectDesc" className='w-full border-1 border-[#0101011e] focus-visible:outline-1 rounded-md px-3 py-1.5 focus:border mt-2 text-sm' placeholder='Tell me about your project...' value={formData.message}></textarea>
+                                <textarea rows={6} onChange={handleChange} name="message" id="projectDesc" className='w-full border-1 border-[#0101011e] focus-visible:outline-1 rounded-md px-3 py-1.5 focus:border mt-2 text-sm' placeholder='Tell me about your project...' value={formData.message}></textarea>
                             </div>
 
                             <button type='submit' className='bg-blue-600 w-full text-white flex items-center justify-center py-2.5 text-lg rounded-md' >
