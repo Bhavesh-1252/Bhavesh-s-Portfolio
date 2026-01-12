@@ -1,11 +1,7 @@
 import { developerInfo } from '../data/profile'
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
-import { mobileContext } from '../context/context';
 
 const Hero = () => {
-    const { isMobile, setMobile } = useContext(mobileContext)
-
     const scrollToSection = (scrollId) => {
         const element = document.getElementById(scrollId);
         if (element) {
@@ -20,7 +16,7 @@ const Hero = () => {
         <section className="min-h-screen relative flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 p-4 sm:p-6 lg:p-8">
 
             <div className="max-w-4xl mx-auto text-center">
-                <div className="mt-10 sm:mb-6">
+                <div className="mt-6">
                     <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6">
                         {developerInfo.availability}
                     </span>
@@ -79,6 +75,13 @@ const Hero = () => {
                         className="text-gray-600 hover:text-blue-600 transition-colors"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-twitter" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                    </Link>
+
+                    <Link
+                        to={developerInfo.social.linktree}
+                        target="_blank"
+                    >
+                        <svg width="22" height="20" viewBox="0 0 18 20" className='fill-gray-600 hover:fill-blue-600 transition-colors' xmlns="http://www.w3.org/2000/svg"><path d="M9.33238 4.4914L12.4054 1.33238L14.1891 3.15903L10.9656 6.23209H15.5V8.76791H10.9441L14.1891 11.9198L12.4054 13.7106L8 9.28367L3.59456 13.7106L1.81089 11.9269L5.05587 8.77507H0.5V6.23209H5.03438L1.81089 3.15903L3.59456 1.33238L6.66762 4.4914V0H9.33238V4.4914ZM6.66762 12.3997H9.33238V18.4169H6.66762V12.3997Z" fill=""></path></svg>
                     </Link>
                 </div>
             </div>

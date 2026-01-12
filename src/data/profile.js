@@ -10,7 +10,8 @@ export const developerInfo = {
   social: {
     github: "https://github.com/Bhavesh-1252",
     linkedin: "https://www.linkedin.com/in/bhavesh-suthar-355848375",
-    twitter: "https://x.com/BhaveshS44862"
+    twitter: "https://x.com/BhaveshS44862",
+    linktree: "https://linktr.ee/bhaveshsuthar9"
   }
 };
 
