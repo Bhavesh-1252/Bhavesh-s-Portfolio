@@ -1,6 +1,14 @@
 import { developerInfo } from '../data/profile'
 
 const About = () => {
+
+    const downloadResume = () => {
+        const link = document.createElement("a");
+        link.href = "/src/assets/Bhavesh_Suthar_Resume.pdf";
+        link.download = "Bhavesh_Suthar_Resume.pdf";
+        link.click();
+    }
+
     return (
         <section id='about' className="px-5 sm:px-10 py-20">
             {/* Component Heading */}
@@ -34,7 +42,7 @@ const About = () => {
                     </div>
 
                     <div>
-                        <button className='text-white cursor-pointer bg-[#2563eb] hover:bg-[#1d4ed8] px-4 py-2 rounded-md text-sm font-semibold flex items-center'>
+                        <button onClick={downloadResume} className='text-white cursor-pointer bg-[#2563eb] hover:bg-[#1d4ed8] px-4 py-2 rounded-md text-sm font-semibold flex items-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download mr-4" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
                             <span>Download Resume</span>
                         </button>
