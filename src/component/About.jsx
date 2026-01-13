@@ -1,10 +1,11 @@
 import { developerInfo } from '../data/profile'
+import resumePDF from "../assets/Bhavesh_Suthar_Resume.pdf"
 
 const About = () => {
 
     const downloadResume = () => {
         const link = document.createElement("a");
-        link.href = "/src/assets/Bhavesh_Suthar_Resume.pdf";
+        link.href = resumePDF;
         link.download = "Bhavesh_Suthar_Resume.pdf";
         link.click();
     }
