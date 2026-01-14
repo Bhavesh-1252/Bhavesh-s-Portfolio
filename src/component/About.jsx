@@ -1,5 +1,5 @@
 import { developerInfo } from '../data/profile'
-import resumePDF from "../assets/Bhavesh_Suthar_Resume.pdf"
+import resumePDF from "../assets/Bhavesh-suthar-resume.pdf"
 
 const About = () => {
 
