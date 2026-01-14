@@ -6,7 +6,7 @@ const About = () => {
     const downloadResume = () => {
         const link = document.createElement("a");
         link.href = resumePDF;
-        link.download = "Bhavesh_Suthar_Resume.pdf";
+        link.download = "Bhavesh-suthar-resume.pdf";
         link.click();
     }
 
