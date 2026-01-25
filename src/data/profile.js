@@ -44,7 +44,7 @@ export const projects = [
     id: 2,
     title: "Password Manager",
     description: "A secure password manager web application to store and manage your passwords safely.",
-    technologies: ["HTML", "CSS", "JavaScript", "React.js", "Vite"],
+    technologies: ["HTML", "TailwindCSS", "JavaScript", "React.js"],
     image : "/pass-manager.png",
     liveUrl: "https://passtakecare.vercel.app/",
     githubUrl: "https://github.com/Bhavesh-1252/Pass-Manager",
@@ -69,18 +69,18 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Tic Tac Toe Game",
-    description: "A classic Tic Tac Toe game implemented using HTML, CSS, and JavaScript.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    image : "/tic-tac-toe.png",
-    liveUrl: "https://tic-tac-toe-one-woad-69.vercel.app/",
-    githubUrl: "https://github.com/Bhavesh-1252/TTT-Project"
+    title: "Bitlink Shortener",
+    description: "A modern URL shortener built for performance and scalability.",
+    technologies: ["HTML", "JavaScript", "TailwindCSS", "Next.js"],
+    image : "/bitlink.png",
+    liveUrl: "https://bitlinkshortener.vercel.app/",
+    githubUrl: "https://github.com/Bhavesh-1252/Bitlink"
   },
   {
     id: 6,
     title: "Itask Manager",
     description: "A task management web application to help users organize and track their tasks efficiently.",
-    technologies: ["HTML", "CSS", "JavaScript", "React.js", "Vite"],
+    technologies: ["HTML", "TailwindCSS", "JavaScript", "React.js"],
     image : "/itask.png",
     liveUrl: "https://todo-list-delta-ecru.vercel.app/",
     githubUrl: "https://github.com/Bhavesh-1252/Todo-List"
