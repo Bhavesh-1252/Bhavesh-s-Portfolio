@@ -18,7 +18,7 @@ const Project = () => {
                         projects.map(project => (
                             <div key={project.id} className="w-full object-center rounded-xl shadow hover:shadow-xl hover:transition-shadow group">
                                 <div className="aspect-video overflow-hidden rounded-t-xl">
-                                    <img src={`${project.image}`} className='object-cover group-hover:scale-105 transition-transform duration-200' alt={project.imageAlt} />
+                                    <img loading='lazy' src={`${project.image}`} className='object-cover group-hover:scale-105 transition-transform duration-200' alt={project.imageAlt} />
                                 </div>
                                 <div className='p-5 flex flex-col gap-4'>
                                     <h3 className='text-xl font-semibold'>{project.title}</h3>
