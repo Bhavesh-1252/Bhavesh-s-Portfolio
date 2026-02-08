@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef, lazy, Suspense } from 'react'
 import { developerInfo } from '../data/profile'
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import emailjs from '@emailjs/browser';
-import ReCAPTCHA from 'react-google-recaptcha';
+const ReCAPTCHA = new lazy(() => import("react-google-recaptcha"));
 
 const Contact = () => {
+    const contactRef = useRef(null);
+    const [loadCaptcha, setLoadCaptcha] = useState(false);
     const [captchaValue, setCaptchaValue] = useState(null);
     const [formData, setFormData] = useState({
         name: '',
@@ -12,6 +14,27 @@ const Contact = () => {
         subject: '',
         message: ''
     })
+
+    // Handling lazy loading of ReCaptcha and display only when user Intersect with contact section
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setLoadCaptcha(true);
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        if (contactRef.current) {
+            observer.observe(contactRef.current);
+        }
+
+        return () => observer.disconnect();
+
+    }, [])
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -89,7 +112,7 @@ const Contact = () => {
     }
 
     return (
-        <section id='contact' className="px-5 sm:px-10 py-20 bg-gray-50">
+        <section id='contact' ref={contactRef} className="px-5 sm:px-10 py-20 bg-gray-50">
             <ToastContainer
                 position="top-right"
                 autoClose={5000}
@@ -173,12 +196,17 @@ const Contact = () => {
 
                         </div>
 
-                        <div className={`mt-2 m-auto ${captchaValue ? "hidden" : "flex"}`}>
-                            <ReCAPTCHA
-                                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                                onChange={handleCaptcha}
-                                className="inline-block m-auto " />
-                        </div>
+                        {
+                            loadCaptcha &&
+                            <Suspense fallback={null}>
+                                <div className={`mt-2 m-auto ${captchaValue ? "hidden" : "flex"}`}>
+                                    <ReCAPTCHA
+                                        sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                                        onChange={handleCaptcha}
+                                        className="inline-block m-auto " />
+                                </div>
+                            </Suspense>
+                        }
                     </form>
                 </div>
             </div>

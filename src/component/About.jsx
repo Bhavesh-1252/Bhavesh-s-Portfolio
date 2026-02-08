@@ -1,5 +1,4 @@
 import { developerInfo } from '../data/profile'
-import resumePDF from "../assets/Bhavesh-suthar-resume.pdf"
 import { Link } from 'react-router-dom'
 
 const About = () => {
