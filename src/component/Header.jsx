@@ -53,7 +53,7 @@ const Navbar = () => {
 
                             {
                                 isMobile ?
-                                    (<button onClick={handleHamburger}>
+                                    (<button aria-label='Navigation Hamburger' onClick={handleHamburger}>
                                         {isHamburger ?
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu" aria-hidden="true"><path d="M4 12h16"></path><path d="M4 18h16"></path><path d="M4 6h16"></path></svg> :
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>}
@@ -64,7 +64,8 @@ const Navbar = () => {
                                         <button onClick={() => scrollToSection("projects")} className="text-[#374151] hover:text-[#2563eb] cursor-pointer" title='Project'>Project</button>
                                         <button onClick={() => scrollToSection("contact")} className="text-white cursor-pointer bg-[#2563eb] hover:bg-[#1d4ed8] px-4 py-2 rounded-md text-sm font-semibold" title='Contact'>Contact</button>
                                     </div>
-                                    )}
+                                    )
+                            }
                         </div>
                     </div>
 
@@ -81,10 +82,6 @@ const Navbar = () => {
 
 
             </header >
-
-            {/* <section>
-
-            </section> */}
         </>
 
 
