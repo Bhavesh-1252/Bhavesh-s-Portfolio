@@ -1,11 +1,9 @@
 import { developerInfo } from '../data/profile'
-import { useState, useEffect, useContext } from 'react';
-// import { mobileContext } from '../context/context';
+import { useState, useEffect } from 'react';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
-    // const { isMobile, setIsMobile } = useContext(mobileContext)
     const [isMobile, setIsMobile] = useState(window.innerWidth < 640)
     const [isHamburger, setIsHamburger] = useState(true);
 
@@ -50,7 +48,7 @@ const Navbar = () => {
             <header className={`fixed z-50 top-0 left-0 right-0 backdrop-blur-md ${isScrolled ? 'bg-white/90 shadow-sm' : 'bg-transparent'}`}>
                 <nav className='max-w-7xl mx-auto h-16 relative'>
                     <div className='flex justify-between items-center h-full px-4 sm:px-6 lg-px-8'>
-                        <h3 className='text-xl font-semibold hover:text-[#2563eb] cursor-pointer' title='Bhavesh Suthar'>{developerInfo.name}</h3>
+                        <h3 className='text-xl font-semibold hover:text-[#2563eb] cursor-pointer' title='Bhavesh Suthar | Frontend Web Developer'>{developerInfo.name}</h3>
                         <div>
 
                             {
@@ -73,10 +71,10 @@ const Navbar = () => {
                     {/* Navigation bar for mobile users after click on hamburger */}
                     <div className={` bg-white overflow-hidden w-full absolute backdrop-blur-2xl transition-all duration-200 shadow-sm px-3 ${isHamburger ? "max-h-0 " : "py-3 max-h-44"}`}>
                         <div className="gap-2">
-                            <button onClick={() => scrollToSection("about")} className="text-[#374151] hover:text-[#2563eb] cursor-pointer block p-2" title='About'>About</button>
-                            <button onClick={() => scrollToSection("skills")} className="text-[#374151] hover:text-[#2563eb] cursor-pointer block p-2" title='Skills'>Skills</button>
-                            <button onClick={() => scrollToSection("projects")} className="text-[#374151] hover:text-[#2563eb] cursor-pointer block p-2" title='Project'>Project</button>
-                            <button onClick={() => scrollToSection("contact")} className="text-[#374151] hover:text-[#2563eb] cursor-pointer block p-2" title='Contact'>Contact</button>
+                            <button onClick={() => scrollToSection("about")} className="text-[#374151] hover:text-[#2563eb] cursor-pointer block p-2">About</button>
+                            <button onClick={() => scrollToSection("skills")} className="text-[#374151] hover:text-[#2563eb] cursor-pointer block p-2">Skills</button>
+                            <button onClick={() => scrollToSection("projects")} className="text-[#374151] hover:text-[#2563eb] cursor-pointer block p-2">Project</button>
+                            <button onClick={() => scrollToSection("contact")} className="text-[#374151] hover:text-[#2563eb] cursor-pointer block p-2">Contact</button>
                         </div>
                     </div>
                 </nav >

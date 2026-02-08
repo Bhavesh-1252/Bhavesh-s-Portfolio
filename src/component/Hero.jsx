@@ -22,7 +22,7 @@ const Hero = () => {
                     </span>
                 </div>
 
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 cursor-default" title='Bhavesh Suthar| Frontend Web Developer'>
                     Hi, I'm <span className="text-blue-600">{developerInfo.name}</span>
                 </h1>
 

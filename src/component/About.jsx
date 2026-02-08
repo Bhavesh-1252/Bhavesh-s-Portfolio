@@ -1,5 +1,6 @@
 import { developerInfo } from '../data/profile'
 import resumePDF from "../assets/Bhavesh-suthar-resume.pdf"
+import { Link } from 'react-router-dom'
 
 const About = () => {
 
@@ -14,18 +15,18 @@ const About = () => {
         <section id='about' className="px-5 sm:px-10 py-20">
             {/* Component Heading */}
             <div className='w-fit m-auto text-center mb-16 '>
-                <h2 className='text-4xl sm:text-5xl font-bold'>About Me</h2>
+                <h2 className='text-4xl sm:text-5xl font-bold cursor-default' title='Get to know about Bhavesh Suthar'>About Me</h2>
                 <span className='w-20 h-1 inline-block bg-blue-600'></span>
             </div>
 
             {/* About Me */}
             <div className='max-w-6xl grid grid-cols-1 sm:grid-cols-2 gap-10 m-auto'>
                 <div className='aspect-square bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex justify-center items-center'>
-                    <div className='w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full bg-blue-600 text-6xl text-white font-bold flex justify-center items-center'>BS</div>
+                    <div className='w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full bg-blue-600 text-6xl text-white font-bold flex justify-center items-center cursor-default'>BS</div>
                 </div>
 
                 <div className="flex flex-col justify-center gap-7">
-                    <p className='text-md md:text-lg text-[#374151] leading-relaxed'>Passionate frontend developer dedicated to building intuitive, responsive, and visually engaging user interfaces. Specialized in crafting high-performance web applications using modern JavaScript frameworks like React, along with HTML, CSS, and UI best practices. </p>
+                    <p className='text-md md:text-lg text-[#374151] leading-relaxed'><span className='font-semibold'>Bhavesh Suthar</span>, a passionate <Link className="font-semibold" to={"https://www.w3schools.com/whatis/whatis_frontenddev.asp"}>frontend web developer</Link> dedicated to building intuitive, responsive, and visually engaging user interfaces. Specialized in crafting high-performance web applications using modern JavaScript frameworks like React, along with HTML, CSS, and UI best practices. </p>
 
                     <div className='text-[#4b5563] '>
                         <div className='flex items-center mb-5'>

@@ -8,7 +8,7 @@ const Skills = () => {
         <section id='skills' className='px-5 sm:px-10 py-20 bg-gray-50'>
             {/* Component Heading */}
             <div className='w-fit m-auto text-center mb-16'>
-                <h2 className='text-4xl sm:text-5xl font-bold'>Skills & Technologies</h2>
+                <h2 className='text-4xl sm:text-5xl font-bold cursor-default' title='Skills possessed by Bhavesh Suthar'>Skills & Technologies</h2>
                 <span className='w-20 h-1 inline-block bg-blue-600'></span>
                 <p className='text-gray-600 w-fit m-auto mt-2'>A creative toolkit for building beautiful, responsive web experiences.</p>
             </div>

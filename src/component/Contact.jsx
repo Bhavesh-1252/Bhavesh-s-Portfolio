@@ -105,7 +105,7 @@ const Contact = () => {
             />
 
             <div className='w-fit m-auto text-center mb-16 '>
-                <h2 className='text-4xl sm:text-5xl font-bold'>Get In Touch</h2>
+                <h2 className='text-4xl sm:text-5xl font-bold cursor-default' title='Contact Bhavesh Suthar'>Get In Touch</h2>
                 <span className='w-20 h-1 inline-block bg-blue-600'></span>
                 <p className='text-gray-600 w-fit m-auto mt-2'>Have a project in mind? Let's discuss how I can help bring your ideas to life</p>
             </div>
@@ -163,7 +163,7 @@ const Contact = () => {
 
                             <div className='w-full mb-5'>
                                 <label htmlFor="projectDesc" className='text-sm font-semibold text-gray-700'>Message</label>
-                                <textarea rows={6} onChange={handleChange} name="message" id="projectDesc" className='w-full border-1 border-[#0101011e] focus-visible:outline-1 rounded-md px-3 py-1.5 focus:border mt-2 text-sm' placeholder='Tell me about your project...' value={formData.message}></textarea>
+                                <textarea rows={6} onChange={handleChange} name="message" id="projectDesc" className='resize-none w-full border-1 border-[#0101011e] focus-visible:outline-1 rounded-md px-3 py-1.5 focus:border mt-2 text-sm' placeholder='Tell me about your project...' value={formData.message}></textarea>
                             </div>
 
                             <button type='submit' className='bg-blue-600 w-full text-white flex items-center justify-center py-2.5 text-lg rounded-md' >

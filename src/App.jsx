@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import './App.css'
 import Navbar from './component/Header'
 import Hero from './component/Hero'
@@ -8,14 +6,12 @@ import Skills from './component/Skills'
 import Project from './component/Project'
 import Contact from './component/Contact'
 import Footer from './component/Footer'
-// import { mobileContext } from './context/context'
 
 function App() {
 
 
   return (
     <>
-      {/* <mobileContext.Provider value={{isMobile, setIsMobile}}> */}
         <Navbar />
 
         <main>

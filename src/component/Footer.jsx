@@ -8,7 +8,7 @@ const Footer = () => {
                 {/* Footer links section */}
                 <div className="py-12">
                     <div>
-                        <h3 className="text-white text-2xl font-bold mb-4">{developerInfo.name}</h3>
+                        <h3 className="text-white text-2xl font-bold mb-4 cursor-default" title="Bhavesh Suthar | Frontend Web Developer">{developerInfo.name}</h3>
                         <p className="mb-4 text-gray-400">{developerInfo.tagline}</p>
                         <div className="flex items-center gap-4">
                             <Link to={developerInfo.social.github} title="Github" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:bg-blue-600 transition-colors p-2.5 bg-gray-800 rounded-full ">

@@ -6,7 +6,7 @@ const Project = () => {
         <section id='projects' className="px-5 sm:px-10 py-20">
             {/* Component Heading */}
             <div className='w-fit m-auto text-center mb-16 '>
-                <h2 className='text-4xl sm:text-5xl font-bold'>Featured Projects</h2>
+                <h2 className='text-4xl sm:text-5xl font-bold cursor-default' title='Projects built by Bhavesh Suthar'>Featured Projects</h2>
                 <span className='w-20 h-1 inline-block bg-blue-600'></span>
                 <p className='text-gray-600 w-fit m-auto mt-2'>A collection of projects showcasing my expertise</p>
             </div>
@@ -18,7 +18,7 @@ const Project = () => {
                         projects.map(project => (
                             <div key={project.id} className="w-full object-center rounded-xl shadow hover:shadow-xl hover:transition-shadow group">
                                 <div className="aspect-video overflow-hidden rounded-t-xl">
-                                    <img src={`${project.image}`} className='object-cover group-hover:scale-105 transition-transform duration-200' alt="" />
+                                    <img src={`${project.image}`} className='object-cover group-hover:scale-105 transition-transform duration-200' alt={project.imageAlt} />
                                 </div>
                                 <div className='p-5 flex flex-col gap-4'>
                                     <h3 className='text-xl font-semibold'>{project.title}</h3>
