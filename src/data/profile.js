@@ -36,7 +36,7 @@ export const projects = [
     title: "Spotify Clone",
     description: "A personal spotify for you - A web application that mimics the Spotify music streaming service.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: "/spotify-clone.png",
+    image: "/spotify-clone.webp",
     imageAlt: "Spotify Clone",
     liveUrl: "https://yourspotify.vercel.app/",
     githubUrl: "https://github.com/Bhavesh-1252/Spotify-Clone"
@@ -46,7 +46,7 @@ export const projects = [
     title: "Password Manager",
     description: "A secure password manager web application to store and manage your passwords safely.",
     technologies: ["HTML", "TailwindCSS", "JavaScript", "React.js"],
-    image: "/password-manager.png",
+    image: "/password-manager.webp",
     imageAlt: "Password Manager",
     liveUrl: "https://passtakecare.vercel.app/",
     githubUrl: "https://github.com/Bhavesh-1252/Pass-Manager",
@@ -56,7 +56,7 @@ export const projects = [
     title: "Skywatch Weather",
     description: "Weather app, search and display current weather conditions for any city.",
     technologies: ["HTML", "TailwindCSS", "React.js", "Vite"],
-    image: "/skywatch-weather.png",
+    image: "/skywatch-weather.webp",
     imageAlt : "Skywatch Weather",
     liveUrl: "https://skywatchweather.vercel.app/",
     githubUrl: "https://github.com/Bhavesh-1252/Weather-app"
@@ -66,7 +66,7 @@ export const projects = [
     title: "Rock Paper Scissors Game",
     description: "A fun and interactive Rock Paper Scissors game built with HTML, CSS, and JavaScript.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: "/rock-paper-scissor.png",
+    image: "/rock-paper-scissor.webp",
     imageAlt:"Rock Paper Scissor",
     liveUrl: "https://rock-paper-scissor-eta-orcin.vercel.app/",
     githubUrl: "https://github.com/Bhavesh-1252/RPS-Project"
@@ -76,7 +76,7 @@ export const projects = [
     title: "Bitlink URL Shortener",
     description: "A modern URL shortener built for performance and scalability.",
     technologies: ["HTML", "JavaScript", "TailwindCSS", "Next.js"],
-    image: "/bitlink-url-shortener.png",
+    image: "/bitlink-url-shortener.webp",
     imageAlt:"Bitlink URL Shortener",
     liveUrl: "https://bitlinkshortener.vercel.app/",
     githubUrl: "https://github.com/Bhavesh-1252/Bitlink"
@@ -86,7 +86,7 @@ export const projects = [
     title: "Itask Manager",
     description: "A task management web application to help users organize and track their tasks efficiently.",
     technologies: ["HTML", "TailwindCSS", "JavaScript", "React.js"],
-    image: "/itask-manager.png",
+    image: "/itask-manager.webp",
     imageAlt: "iTask Manager",
     liveUrl: "https://todo-list-delta-ecru.vercel.app/",
     githubUrl: "https://github.com/Bhavesh-1252/Todo-List"
