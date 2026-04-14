@@ -53,23 +53,23 @@ export const projects = [
   },
   {
     id: 3,
+    title: "FlowSync - Saas",
+    description: "A clean landing page - FlowSync that highlights simple workflow automation",
+    technologies: ["HTML", "TailwindCSS", "React.js", "Vite"],
+    image: "/flowsync.webp",
+    imageAlt: "FlowSync - Saas",
+    liveUrl: "https://saas-flowsync.vercel.app/",
+    githubUrl: "https://github.com/Bhavesh-1252/Saas-Landing-Page"
+  },
+  {
+    id: 4,
     title: "Skywatch Weather",
     description: "Weather app, search and display current weather conditions for any city.",
     technologies: ["HTML", "TailwindCSS", "React.js", "Vite"],
     image: "/skywatch-weather.webp",
-    imageAlt : "Skywatch Weather",
+    imageAlt: "Skywatch Weather",
     liveUrl: "https://skywatchweather.vercel.app/",
     githubUrl: "https://github.com/Bhavesh-1252/Weather-app"
-  },
-  {
-    id: 4,
-    title: "Rock Paper Scissors Game",
-    description: "A fun and interactive Rock Paper Scissors game built with HTML, CSS, and JavaScript.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    image: "/rock-paper-scissor.webp",
-    imageAlt:"Rock Paper Scissor",
-    liveUrl: "https://rock-paper-scissor-eta-orcin.vercel.app/",
-    githubUrl: "https://github.com/Bhavesh-1252/RPS-Project"
   },
   {
     id: 5,
@@ -77,7 +77,7 @@ export const projects = [
     description: "A modern URL shortener built for performance and scalability.",
     technologies: ["HTML", "JavaScript", "TailwindCSS", "Next.js"],
     image: "/bitlink-url-shortener.webp",
-    imageAlt:"Bitlink URL Shortener",
+    imageAlt: "Bitlink URL Shortener",
     liveUrl: "https://bitlinkshortener.vercel.app/",
     githubUrl: "https://github.com/Bhavesh-1252/Bitlink"
   },

@@ -29,11 +29,11 @@ const Project = () => {
                                         )}
                                     </div>
                                     <div className='flex gap-4 bottom-0'>
-                                        <Link to={project.liveUrl} reloadDocument className='flex gap-2 items-center w-full text-xs font-semibold border-1 justify-center border-gray-200 rounded-sm py-1.5 group/Link hover:border-blue-600 hover:bg-gray-50'>
+                                        <Link to={project.liveUrl} target='_blank' reloadDocument className='flex gap-2 items-center w-full text-xs font-semibold border-1 justify-center border-gray-200 rounded-sm py-1.5 group/Link hover:border-blue-600 hover:bg-gray-50'>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-external-link mr-1 group-hover/Link:text-blue-600" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
                                             <span className='group-hover/Link:text-blue-600'>Live Demo</span>
                                         </Link>
-                                        <Link to={project.githubUrl} reloadDocument className='flex gap-2 items-center w-full text-xs font-semibold border-1 justify-center border-gray-200 rounded-sm py-1.5 group/Link hover:border-blue-600 hover:bg-gray-50'>
+                                        <Link to={project.githubUrl} target='_blank' reloadDocument className='flex gap-2 items-center w-full text-xs font-semibold border-1 justify-center border-gray-200 rounded-sm py-1.5 group/Link hover:border-blue-600 hover:bg-gray-50'>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-external-link mr-1 group-hover/Link:text-blue-600" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
                                             <span className='group-hover/Link:text-blue-600'>Github</span>
                                         </Link>
