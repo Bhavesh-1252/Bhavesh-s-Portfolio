@@ -20,7 +20,6 @@ export const skills = [
   { name: "CSS3", category: "Development" },
   { name: "JavaScript", category: "Development" },
   { name: "React.js", category: "Library" },
-  { name: "Next.js", category: "Framework" },
   { name: "Tailwind CSS", category: "Framework" },
   { name: "Bootstrap", category: "Framework" },
   { name: "GitHub", category: "Tools" },
@@ -43,13 +42,14 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Password Manager",
-    description: "A secure password manager web application to store and manage your passwords safely.",
-    technologies: ["HTML", "TailwindCSS", "JavaScript", "React.js"],
-    image: "/password-manager.webp",
-    imageAlt: "Password Manager",
-    liveUrl: "https://passtakecare.vercel.app/",
-    githubUrl: "https://github.com/Bhavesh-1252/Pass-Manager",
+    title: "Keep Track",
+    description: "Track expenses, categorize transactions and gain insights into your spending.",
+    technologies: ["HTML", "TailwindCSS", "React.js", "Vite"],
+    image: "/keep-track.webp",
+    imageAlt: "Keep Track",
+    liveUrl: "https://keeptrackexpense.vercel.app/",
+    githubUrl: "https://github.com/Bhavesh-1252/Expense-Tracker"
+
   },
   {
     id: 3,
@@ -73,13 +73,13 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Bitlink URL Shortener",
-    description: "A modern URL shortener built for performance and scalability.",
-    technologies: ["HTML", "JavaScript", "TailwindCSS", "Next.js"],
-    image: "/bitlink-url-shortener.webp",
-    imageAlt: "Bitlink URL Shortener",
-    liveUrl: "https://bitlinkshortener.vercel.app/",
-    githubUrl: "https://github.com/Bhavesh-1252/Bitlink"
+    title: "Password Manager",
+    description: "A secure password manager web application to store and manage your passwords safely.",
+    technologies: ["HTML", "TailwindCSS", "JavaScript", "React.js"],
+    image: "/password-manager.webp",
+    imageAlt: "Password Manager",
+    liveUrl: "https://passtakecare.vercel.app/",
+    githubUrl: "https://github.com/Bhavesh-1252/Pass-Manager",
   },
   {
     id: 6,
