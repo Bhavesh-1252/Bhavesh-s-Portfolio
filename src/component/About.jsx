@@ -1,11 +1,11 @@
-import { developerInfo } from '../data/profile'
-import { Link } from 'react-router-dom'
+import { developerInfo } from '../data/profile';
+import { Link } from 'react-router-dom';
 
 const About = () => {
 
     const downloadResume = () => {
         const link = document.createElement("a");
-        link.href = "https://drive.google.com/file/d/1_dw_BOGpX0xu_hm6pGXGrRUaf5cu8L6k/view?usp=drive_link";
+        link.href = "https://drive.google.com/file/d/1IAadBSIPMy9mSgfmG2kOBrr5r7B6VudR/view?usp=drive_link";
         link.target = "_blank";
         link.click();
     }
