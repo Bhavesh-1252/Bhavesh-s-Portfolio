@@ -9,7 +9,7 @@ export const developerInfo = {
   availability: "Available for freelance projects",
   social: {
     github: "https://github.com/Bhavesh-1252",
-    linkedin: "https://www.linkedin.com/in/bhavesh-suthar-355848375",
+    linkedin: "www.linkedin.com/in/suthar-bhaveshhh",
     twitter: "https://x.com/suthar_bhavesh9",
     linktree: "https://linktr.ee/bhaveshsuthar9"
   }
